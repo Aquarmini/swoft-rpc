@@ -1,5 +1,16 @@
 # swoft-rpc
 
+[![Build Status](https://travis-ci.org/limingxinleo/swoft-rpc.svg?branch=master)](https://travis-ci.org/limingxinleo/swoft-rpc)
+
+用于封装常用的Breaker和ServicePool
+
+自定义的Breaker和ServicePool需要继承当前类库进行实现。
+
+安装
+~~~
+composer require limingxinleo/swoft-rpc
+~~~
+
 基本配置 app.php
 ~~~
 return [
@@ -29,10 +40,10 @@ return [
             'delayTime' => 500,
         ],
     ],
-    'provider' => require __DIR__ . DS . 'provider.php',
-    'message' => require __DIR__ . DS . 'message.php',
-    'queue' => require __DIR__ . DS . 'queue.php',
-    'beanScan' => require __DIR__ . DS . 'beanScan.php',
-    'components' => require __DIR__ . DS . 'components.php',
+    'components' => [
+        'custom' => [
+            'Swoftx\\Rpc\\'
+        ],
+    ],
 ];
 ~~~
