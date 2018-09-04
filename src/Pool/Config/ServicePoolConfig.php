@@ -25,7 +25,6 @@ class ServicePoolConfig extends PoolProperties
     /**
      * the name of pool
      *
-     *
      * @Value(name="${config.service.default.name}")
      * @var string
      */
