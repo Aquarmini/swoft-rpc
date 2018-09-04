@@ -7,9 +7,15 @@
  * @contact  limingxin@swoft.org
  * @license  https://github.com/swoft-cloud/swoft/blob/master/LICENSE
  */
-
 return [
     'version' => '1.0',
     'autoInitBean' => true,
-    'beanScan' => [],
+    'beanScan' => [
+        // 'Swoftx\\Rpc' => BASE_PATH . '/src',
+    ],
+    'components' => [
+        'custom' => [
+            'Swoftx\\Rpc' => '@root/../src',
+        ],
+    ],
 ];
